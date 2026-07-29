@@ -214,7 +214,7 @@ Weights `w` live in versioned config, per category; every ranked item carries it
 ## 9.6 Provenance and audit implementation
 
 - The **event log is the provenance record**: hash-chained (`prev_hash`), actor-attributed, append-only; PROV-O export is a projection (`event → prov:Activity`, `entity version → prov:Entity`, `actor → prov:Agent`, supersession → `prov:wasRevisionOf`).
-- **AI audit store**: full prompts/responses/parameters keyed from suggestion events (payloads stay out of the main log to keep it lean); retention policy per project.
+- **AI audit store**: full prompts/responses/parameters keyed from suggestion events (payloads stay out of the main log to keep it lean), plus the per-call **context manifest** — included items with selection reasons and excluded candidates with exclusion reasons ([§8.2](08-ai-and-deterministic-boundaries.md)); retention policy per project.
 - **Immutability**: approved-content tables accept no UPDATE from the app role (DB constraint); revision = new version row + supersession event ([§8.3](08-ai-and-deterministic-boundaries.md) "hidden changes" safeguard).
 - Access control: role-per-project RBAC; hub enforces Postgres row-level security by project; publication registry is the *only* cross-project read path.
 
@@ -254,4 +254,4 @@ POST   /sync/events                               append-only event exchange (cl
 | Alignment data | "how was this token rendered" Evidence | Clear-Bible alignments format / SB alignment flavor |
 | BDAG/HALOT etc. (licensed) | citation pointers only | resource-registry entries with locator schemes; no content stored |
 
-Every import records resource version in the registry; anchors carry their scheme+version so cross-project comparison can detect scheme mismatches ([§5.7](05-relevance-and-precedent-framework.md) version compatibility).
+Every import records resource version in the registry; anchors carry their scheme+version so cross-project comparison can detect scheme mismatches ([§5.7](05-relevance-and-precedent-framework.md) version compatibility). For interchange, anchors are exportable as W3C Web Annotation selectors (text quote + position selectors alongside the token-ID form), keeping the anchoring model legible to standard annotation tooling ([§3.8](03-research-and-prior-art-landscape.md)).

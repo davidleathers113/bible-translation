@@ -130,7 +130,8 @@ Directed edge `from` (the dependent item) `on` (the prerequisite), with:
 | hardness | `hard` (dependent cannot reach `approved` while unsatisfied) / `soft` (warning only) |
 | blocking | whether it blocks work-start or only approval |
 | scope | `instance` (this issue only) / `project-wide` (auto-instantiated for all issues matching an anchor pattern — e.g., every issue anchored to key-term "Lamb" depends on the key-term decision) |
-| state | `hypothesized / confirmed / satisfied / invalidated / reopened` — §4.5; transitions are rule-driven (§6.2) |
+| state | `hypothesized / confirmed / satisfied / waived / invalidated / reopened` — §4.5; transitions are rule-driven (§6.2). `waived` (adapted from the companion ChatGPT design document): a team consciously proceeds past an unmet dependency; requires the configured waiver authority, a recorded reason, and is revocable — waived is never displayed as satisfied |
+| waiver authority | role required to waive (per project policy; e.g., consultant for key-term dependencies) |
 | satisfaction criterion | machine-checkable where possible: "Issue X reaches `approved`"; else a human-attested completion |
 | origin class | AI-suggested dependencies stay `hypothesized` until a human confirms |
 
@@ -191,6 +192,9 @@ stateDiagram-v2
     hypothesized --> confirmed : human confirms
     hypothesized --> rejected_dep : human rejects
     confirmed --> satisfied : criterion met (rule-evaluated)
+    confirmed --> waived : waived by authorized role (reason recorded)
+    waived --> confirmed : waiver revoked
+    waived --> satisfied : criterion later met
     satisfied --> invalidated : prerequisite superseded or reopened
     invalidated --> satisfied : re-satisfied after review
     confirmed --> invalidated : prerequisite withdrawn

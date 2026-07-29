@@ -65,6 +65,8 @@ Every surfaced candidate shows: facet badges (shared anchors, with their labels)
 
 Overrides never fight the user: a suppressed candidate stays suppressed for that Issue even if its score rises.
 
+**Negative context is retrieved, not just stored** (framing adapted from the companion ChatGPT context-engineering document). The corpus already contains dead ends — Options investigated and rejected, precedents `distinguished` or `rejected` with reasons, suppressed candidate pairs, community-testing failures. Retrieval surfaces these as first-class results on matching anchors: "a rendering like this was tested and rejected in 3:9 — see why." Preventing a team (or an AI assistant) from unknowingly reopening a settled dead end is one of the highest-value retrieval outcomes, and it costs nothing beyond ranking treatment-bearing negative records alongside positive ones with distinct badging.
+
 ## 5.6 Precedent treatments (the human layer)
 
 Adapted from legal citator signals (§2.4):

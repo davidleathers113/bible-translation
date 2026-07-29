@@ -40,7 +40,7 @@ The MVP succeeds if it can show, with real translators on a real text: (a) captu
 
 ## 10.5 Why Jonah
 
-48 verses — enterable in full within a workshop; narrative with dialogue (participant-reference and speech-act issues); theologically loaded key terms recurring at decision-critical points (*ḥesed* 2:8/4:2, *gadol* motif, divine names YHWH/Elohim patterning — a classic discourse-signal problem); the Jonah 2 psalm gives one genre shift; rich cultural-concept content (sacrifice, vows, fasting, lots). It generates every MVP-relevant issue category without requiring OT-wide analysis. (Ruth is the comparable alternative; Jonah's divine-name patterning and psalm make it slightly richer for dependency demonstrations.)
+48 verses — enterable in full within a workshop; narrative with dialogue (participant-reference and speech-act issues); theologically loaded key terms recurring at decision-critical points (*ḥesed* 2:8/4:2, *gadol* motif, divine names YHWH/Elohim patterning — a classic discourse-signal problem); the Jonah 2 psalm gives one genre shift; rich cultural-concept content (sacrifice, vows, fasting, lots). It generates every MVP-relevant issue category without requiring OT-wide analysis. (Ruth is the comparable alternative; Jonah's divine-name patterning and psalm make it slightly richer for dependency demonstrations.) If the pilot partner is NT-focused, the strongest alternative corpus is the **1 Corinthians slogan cluster** ([§15.8](15-worked-example.md)): a bounded set of quotation/discourse Issues (6:12, 7:1, 10:23 and kin) that exercises discourse-anchored peer-network retrieval, which Jonah's key-term-heavy profile underweights.
 
 ## 10.6 Suggested technology
 

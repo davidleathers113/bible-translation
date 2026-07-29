@@ -35,10 +35,15 @@ criterion_met    ⇐ (dep.criterion = state-reach ∧ prerequisite.status ≥ de
                  ∨ (dep.criterion = attestation ∧ ∃ attestation by required role)
 invalidated(dep) ⇐ dep was satisfied
                    ∧ (prerequisite superseded ∨ prerequisite reopened ∨ attestation revoked)
+waived(dep)      ⇐ dep.state = confirmed
+                   ∧ waiver recorded by role ≥ dep.waiver_authority (reason required)
 blocked(issue)   ⇐ ∃ dep from issue: dep.hardness = hard ∧ dep.blocking-mode covers the
-                   attempted transition ∧ dep.state ∉ {satisfied}
-ready(issue)     ⇐ issue.status ∈ {open, in-analysis} ∧ ¬∃ unsatisfied hard work-blocking dep
+                   attempted transition ∧ dep.state ∉ {satisfied, waived}
+ready(issue)     ⇐ issue.status ∈ {open, in-analysis} ∧ ¬∃ unsatisfied, unwaived hard
+                   work-blocking dep
 ```
+
+**Waivers** (adapted from the companion ChatGPT design document): a team may consciously proceed past an unmet hard dependency — but only through an explicit waiver by the configured authority, with a recorded reason. A waived dependency suppresses blocking without pretending fulfillment: it stays visually distinct from `satisfied`, appears on the risk views, is revocable (waiver revoked → blocking resumes), and converts to `satisfied` automatically if its criterion is later met. This gives the escape hatch real workflows need while keeping the audit trail honest.
 
 "Partially fulfilled" is not a dependency state — it is an *issue-level* derived quantity (`3 of 5 hard dependencies satisfied`), displayed but never used in blocking logic. This keeps the state machine crisp while giving users the progress signal the brief asked for.
 

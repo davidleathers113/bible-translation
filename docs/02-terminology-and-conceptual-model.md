@@ -61,7 +61,7 @@ The second conceptual move is that **decisions are connected primarily through s
 | Term | Definition |
 |---|---|
 | **Origin class** | Every node and edge carries exactly one origin class: `human-authored`, `human-approved`, `ai-suggested`, `rule-derived` (deterministic computation), or `imported-external`. Nothing is ever silently promoted between classes; promotion (e.g., accepting an AI suggestion) is an event with an actor (§8, §9.6). |
-| **Lifecycle state** | Issues: `draft → open → in-analysis → decided → approved → superseded` (plus `deferred`, `withdrawn`). Dependencies: `hypothesized → confirmed → satisfied → invalidated → reopened`. Full state machines in §4. |
+| **Lifecycle state** | Issues: `draft → open → in-analysis → decided → approved → superseded` (plus `deferred`, `withdrawn`). Dependencies: `hypothesized → confirmed → satisfied → invalidated → reopened`, plus `waived` (authorized, recorded, revocable override — never displayed as satisfied). Full state machines in §4. |
 | **Provenance event** | An append-only record of who/what changed anything, when, and on what basis, structured after W3C PROV (Entity–Activity–Agent) (§4.6, §9.6). |
 
 ## 2.3 Why a subgraph, not a single record
