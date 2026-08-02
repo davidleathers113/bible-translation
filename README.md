@@ -22,7 +22,8 @@ A research-grounded plan for a system that captures Bible-translation decisions 
 | [12](docs/12-efficacy-study.md) | Efficacy study — measures, designs, baselines, pre-registered success/failure criteria |
 | [13](docs/13-risks-and-open-questions.md) | Risks and unresolved questions — adoption, linguistic, theological, governance, licensing, technical |
 | [14](docs/14-next-actions.md) | Recommended next actions — prioritized sequence from concept to prototype |
-| [15](docs/15-worked-example.md) | Worked example — ἀμνὸς τοῦ θεοῦ (John 1:29) end to end |
+| [15](docs/15-worked-example.md) | Worked example — ἀμνὸς τοῦ θεοῦ (John 1:29) end to end, plus the 1 Corinthians slogan cluster |
+| [16](docs/16-sil-contribution-map.md) | SIL contribution map — the SIL GitHub orgs and repos to build on and contribute to |
 
 **Reading shortcuts:** in a hurry → [15](docs/15-worked-example.md), then [05](docs/05-relevance-and-precedent-framework.md)–[06](docs/06-dependency-and-prioritization.md), then [10](docs/10-mvp-definition.md). Talking to partners → [01](docs/01-executive-synthesis.md) + [15](docs/15-worked-example.md). Building → [04](docs/04-domain-model.md) + [09](docs/09-technical-architecture.md) + [10](docs/10-mvp-definition.md).
 
