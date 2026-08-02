@@ -24,6 +24,7 @@ A research-grounded plan for a system that captures Bible-translation decisions 
 | [14](docs/14-next-actions.md) | Recommended next actions — prioritized sequence from concept to prototype |
 | [15](docs/15-worked-example.md) | Worked example — ἀμνὸς τοῦ θεοῦ (John 1:29) end to end, plus the 1 Corinthians slogan cluster |
 | [16](docs/16-sil-contribution-map.md) | SIL contribution map — the SIL GitHub orgs and repos to build on and contribute to |
+| [17](docs/17-first-contribution-playbook.md) | First-contribution playbook — live repo recon, starting sequence, and the human/AI division of labor (corrects doc 16's web-xforge entry-point assessment) |
 
 **Reading shortcuts:** in a hurry → [15](docs/15-worked-example.md), then [05](docs/05-relevance-and-precedent-framework.md)–[06](docs/06-dependency-and-prioritization.md), then [10](docs/10-mvp-definition.md). Talking to partners → [01](docs/01-executive-synthesis.md) + [15](docs/15-worked-example.md). Building → [04](docs/04-domain-model.md) + [09](docs/09-technical-architecture.md) + [10](docs/10-mvp-definition.md).
 
